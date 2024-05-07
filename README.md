@@ -8,6 +8,6 @@ Credit:
 
 **The ultimate introduction to Pygame**
 
-https://www.youtube.com/watch
+https://www.youtube.com/watch?v=AY9MnQ4x3zk
 
 by **Clear Code**
