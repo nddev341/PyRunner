@@ -1,6 +1,6 @@
 import pygame
 from sys import exit
-from random import randint, choice
+from random import choice
 from Player import Player
 from Obstacle import Obstacle
 
