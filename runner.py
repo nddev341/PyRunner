@@ -6,7 +6,7 @@ from Obstacle import Obstacle
 
 def display_score():
     current_time = int(pygame.time.get_ticks() // 1000) - start_time
-    timer_surface = font.render('Time : ' + str(current_time), False, 'black')
+    timer_surface = font.render('Score : ' + str(current_time), False, 'black')
     timer_rect = timer_surface.get_rect(topleft=(10, 10))
     screen.blit(timer_surface, timer_rect)
     return current_time
