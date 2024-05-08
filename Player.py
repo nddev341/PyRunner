@@ -1,4 +1,5 @@
 import pygame
+from constants import PLAYER_CORD, GRAVITY, MUSIC_VOLUME, JUMP_SOUND_PATH
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
@@ -9,16 +10,16 @@ class Player(pygame.sprite.Sprite):
         self.player_index = 0
         self.player_jump = pygame.image.load('graphics/Player/jump.png').convert_alpha()
         self.image = self.player_walk[self.player_index]
-        self.rect = self.image.get_rect(midbottom = (80, 300))
+        self.rect = self.image.get_rect(midbottom = PLAYER_CORD)
         self.gravity = 0
 
-        self.jump_sound = pygame.mixer.Sound('audio/jump.mp3')
-        self.jump_sound.set_volume(0.2)
+        self.jump_sound = pygame.mixer.Sound(JUMP_SOUND_PATH)
+        self.jump_sound.set_volume(MUSIC_VOLUME)
 
     def player_input(self):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_SPACE] and self.rect.bottom >= 300:
-            self.gravity = -20
+            self.gravity = GRAVITY
             self.jump_sound.play()
 
     def apply_gravity(self):
